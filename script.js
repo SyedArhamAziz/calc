@@ -33,6 +33,24 @@ function onClick() {
         data[1] = "";
         data[2] = "";
     }
+    else if (this.innerHTML == "±") {
+        if (data[2] == "") {
+            if (data[0][0] != "-") {
+                data[0] = "-" + data[0];
+            }
+            else {
+                data[0] = data[0].slice(1);
+            }
+        }
+        else {
+            if (data[2][0] != "-") {
+                data[2] = "-" + data[2];
+            }
+            else {
+                data[2] = data[2].slice(1);
+            }
+        }
+    }
     updateDisplay(screen, data);
     console.log(data);
 }
